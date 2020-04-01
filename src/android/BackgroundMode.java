@@ -31,6 +31,8 @@ import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
 import org.json.JSONArray;
 import org.json.JSONObject;
+import android.widget.Toast;
+import android.content.Context;
 
 import de.appplant.cordova.plugin.background.ForegroundService.ForegroundBinder;
 
@@ -91,6 +93,8 @@ public class BackgroundMode extends CordovaPlugin {
     public boolean execute (String action, JSONArray args,
                             CallbackContext callback)
     {
+         Context context=this.cordova.getActivity().getApplicationContext();
+    Toast.makeText(context,"Hello wmc",Toast.LENGTH_SHORT).show();
         boolean validAction = true;
 
         switch (action)
@@ -149,6 +153,8 @@ public class BackgroundMode extends CordovaPlugin {
     @Override
     public void onResume (boolean multitasking)
     {
+    Context context=this.cordova.getActivity().getApplicationContext();
+    Toast.makeText(context,"Hello wmc",Toast.LENGTH_SHORT).show();
         inBackground = false;
         stopService();
     }

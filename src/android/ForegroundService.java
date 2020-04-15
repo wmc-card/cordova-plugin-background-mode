@@ -179,7 +179,7 @@ public class ForegroundService extends Service {
         // The user-visible description of the channel.
         String description = "cordova-plugin-background-moden notification";
 
-        int importance = NotificationManager.IMPORTANCE_LOW;
+        int importance = NotificationManager.IMPORTANCE_HIGH;
 
         NotificationChannel mChannel = new NotificationChannel(CHANNEL_ID, name,importance);
 

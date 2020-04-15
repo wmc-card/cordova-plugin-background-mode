@@ -1,6 +1,5 @@
 /*
  Copyright 2013 Sebastián Katzer
-
  Licensed to the Apache Software Foundation (ASF) under one
  or more contributor license agreements.  See the NOTICE file
  distributed with this work for additional information
@@ -8,9 +7,7 @@
  to you under the Apache License, Version 2.0 (the
  "License"); you may not use this file except in compliance
  with the License.  You may obtain a copy of the License at
-
  http://www.apache.org/licenses/LICENSE-2.0
-
  Unless required by applicable law or agreed to in writing,
  software distributed under the License is distributed on an
  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
@@ -179,7 +176,7 @@ public class ForegroundService extends Service {
         // The user-visible description of the channel.
         String description = "cordova-plugin-background-moden notification";
 
-        int importance = NotificationManager.IMPORTANCE_HIGH;
+        int importance = NotificationManager.IMPORTANCE_LOW;
 
         NotificationChannel mChannel = new NotificationChannel(CHANNEL_ID, name,importance);
 
@@ -206,7 +203,7 @@ public class ForegroundService extends Service {
         if(Build.VERSION.SDK_INT >= 26){
                    notification.setChannelId(CHANNEL_ID);
         }
-        notification.setPriority(Notification.IMPORTANCE_HIGH);
+
         if (settings.optBoolean("hidden", true)) {
             notification.setPriority(Notification.PRIORITY_MIN);
         }

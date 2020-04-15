@@ -199,7 +199,7 @@ public class ForegroundService extends Service {
 
         Notification.Builder notification = new Notification.Builder(context)
                 .setContentTitle(title)
-                .setContentText("test")
+                .setContentText(text)
                 .setOngoing(true)
                 .setSmallIcon(getIconResId(settings));
 

@@ -199,14 +199,14 @@ public class ForegroundService extends Service {
 
         Notification.Builder notification = new Notification.Builder(context)
                 .setContentTitle(title)
-                .setContentText(text)
+                .setContentText("test")
                 .setOngoing(true)
                 .setSmallIcon(getIconResId(settings));
 
         if(Build.VERSION.SDK_INT >= 26){
                    notification.setChannelId(CHANNEL_ID);
         }
-        notification.setPriority(Notification.PRIORITY_MAX);
+        notification.setPriority(Notification.IMPORTANCE_HIGH);
         if (settings.optBoolean("hidden", true)) {
             notification.setPriority(Notification.PRIORITY_MIN);
         }

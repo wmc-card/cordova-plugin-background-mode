@@ -239,7 +239,7 @@ NSString* const kAPPBackgroundEventDeactivate = @"deactivate";
 /**
  * Method to swizzle.
  */
-(NSString*) wkProperty
++ (NSString*) wkProperty
 {
 NSString* str = @"YWx3YXlzUnVuc0F0Rm9yZWdyb3VuZFByaW9yaXR5";
 NSData* data = [[NSData alloc] initWithBase64EncodedString:str options:0];

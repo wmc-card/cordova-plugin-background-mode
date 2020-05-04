@@ -12,6 +12,7 @@ public class BroadcastReceiverOnBootComplete extends BroadcastReceiver {
         if (intent.getAction().equalsIgnoreCase(Intent.ACTION_BOOT_COMPLETED)) {
             //Intent serviceIntent = new Intent(context, ForegroundService.class);
             //context.startService(serviceIntent);
+            Toast.makeText(context,"Broadcast Received in Activity called ",Toast.LENGTH_SHORT).show();
         }
     }
 }

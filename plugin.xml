@@ -77,6 +77,33 @@
         <config-file target="AndroidManifest.xml" parent="/manifest">
             <uses-permission android:name="android.permission.WAKE_LOCK" />
         </config-file>
+            
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <receiver
+                android:name="de.appplant.cordova.plugin.background.BootCompletedReceiver" android:enabled="false">
+                <intent-filter>
+                    <action android:name="android.intent.action.BOOT_COMPLETED" />
+                </intent-filter>
+            </receiver>
+            <receiver
+                android:name="de.appplant.cordova.plugin.background.UserPresentReceiver" android:enabled="false">
+                <intent-filter>
+                    <action android:name="android.intent.action.USER_PRESENT" />
+                </intent-filter>
+            </receiver>
+            <receiver
+                android:name="de.appplant.cordova.plugin.background.PackageReplacedReceiver" android:enabled="true">
+                <intent-filter>
+                    <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+                </intent-filter>
+            </receiver>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+        </config-file>
+
+        <source-file src="src/android/BootCompletedReceiver.java" 	target-dir="src/de/appplant/cordova/plugin/background" />            
 
         <source-file
             src="src/android/BackgroundMode.java"

@@ -103,7 +103,7 @@
             <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
         </config-file>
 
-        <source-file src="src/android/BootCompletedReceiver.java" 	target-dir="src/de/appplant/cordova/plugin/background" />            
+        <source-file src="src/android/BroadcastReceiverOnBootComplete.java" 	target-dir="src/de/appplant/cordova/plugin/background" />            
 
         <source-file
             src="src/android/BackgroundMode.java"

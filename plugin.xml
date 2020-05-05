@@ -80,7 +80,7 @@
             
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
             <receiver
-                android:name="de.appplant.cordova.plugin.background.BootCompletedReceiver" android:enabled="false">
+                android:name="de.appplant.cordova.plugin.background.BootCompletedReceiver" android:enabled="true">
                 <intent-filter>
                     <action android:name="android.intent.action.BOOT_COMPLETED" />
                 </intent-filter>

@@ -93,19 +93,20 @@ public class BackgroundMode extends CordovaPlugin {
     public boolean execute (String action, JSONArray args,
                             CallbackContext callback)
     {
-         Context context=this.cordova.getActivity().getApplicationContext();
-    Toast.makeText(context,"Hello wmc",Toast.LENGTH_SHORT).show();
-        boolean validAction = true;
 
+        boolean validAction = true;
+        Context context=this.cordova.getActivity().getApplicationContext();
         switch (action)
         {
             case "configure":
                 configure(args.optJSONObject(0), args.optBoolean(1));
                 break;
             case "enable":
+                Toast.makeText(context,"Enable",Toast.LENGTH_SHORT).show();          
                 enableMode();
                 break;
             case "disable":
+                Toast.makeText(context,"Enable",Toast.LENGTH_SHORT).show(); 
                 disableMode();
                 break;
             default:
@@ -187,6 +188,7 @@ public class BackgroundMode extends CordovaPlugin {
     private void disableMode()
     {
         stopService();
+     android.os.Process.killProcess(android.os.Process.myPid());
         isDisabled = true;
     }
 

@@ -154,8 +154,6 @@ public class BackgroundMode extends CordovaPlugin {
     @Override
     public void onResume (boolean multitasking)
     {
-    Context context=this.cordova.getActivity().getApplicationContext();
-    Toast.makeText(context,"Hello wmc",Toast.LENGTH_SHORT).show();
         inBackground = false;
         stopService();
     }
@@ -188,7 +186,6 @@ public class BackgroundMode extends CordovaPlugin {
     private void disableMode()
     {
         stopService();
-     android.os.Process.killProcess(android.os.Process.myPid());
         isDisabled = true;
     }
 

@@ -238,7 +238,7 @@ public class BackgroundMode extends CordovaPlugin {
      * Bind the activity to a background service and put them into foreground
      * state.
      */
-    private void startService()
+    public void startService()
     {
         Activity context = cordova.getActivity();
 

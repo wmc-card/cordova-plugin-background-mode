@@ -174,8 +174,9 @@ public class BackgroundMode extends CordovaPlugin {
     private void enableMode()
     {
         isDisabled = false;
-
+        
         if (inBackground) {
+         stopService();
             startService();
         }
     }

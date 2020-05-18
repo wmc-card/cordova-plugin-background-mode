@@ -188,7 +188,7 @@ public class BackgroundMode extends CordovaPlugin {
     {
         stopService();
         isDisabled = true;
-     android.os.Process.killProcess(android.os.Process.myPid());
+     //android.os.Process.killProcess(android.os.Process.myPid());
     }
 
     /**
@@ -268,7 +268,7 @@ public class BackgroundMode extends CordovaPlugin {
         Activity context = cordova.getActivity();
         Intent intent    = new Intent(context, ForegroundService.class);
 
-        if (!isBind) return;
+        //if (!isBind) return;
 
         fireEvent(Event.DEACTIVATE, null);
         context.unbindService(connection);

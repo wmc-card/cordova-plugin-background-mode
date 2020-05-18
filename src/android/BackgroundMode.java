@@ -176,7 +176,7 @@ public class BackgroundMode extends CordovaPlugin {
         isDisabled = false;
         
         if (inBackground) {
-         stopService();
+         
             startService();
         }
     }
@@ -188,6 +188,7 @@ public class BackgroundMode extends CordovaPlugin {
     {
         stopService();
         isDisabled = true;
+     android.os.Process.killProcess(android.os.Process.myPid());
     }
 
     /**

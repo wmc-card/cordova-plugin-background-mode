@@ -154,8 +154,8 @@ public class BackgroundMode extends CordovaPlugin {
     @Override
     public void onResume (boolean multitasking)
     {
-        inBackground = false;
-        stopService();
+        //inBackground = false;
+        //stopService();
     }
 
     /**

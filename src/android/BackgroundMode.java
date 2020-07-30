@@ -102,11 +102,11 @@ public class BackgroundMode extends CordovaPlugin {
                 configure(args.optJSONObject(0), args.optBoolean(1));
                 break;
             case "enable":
-                Toast.makeText(context,"Enable",Toast.LENGTH_SHORT).show();          
+                Toast.makeText(context,"On",Toast.LENGTH_SHORT).show();          
                 enableMode();
                 break;
             case "disable":
-                Toast.makeText(context,"Enable",Toast.LENGTH_SHORT).show(); 
+                Toast.makeText(context,"Off",Toast.LENGTH_SHORT).show(); 
                 disableMode();
                 break;
             default:

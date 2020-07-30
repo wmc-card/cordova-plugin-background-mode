@@ -49,11 +49,11 @@ public class ForegroundService extends Service {
 
     // Default title of the background notification
     private static final String NOTIFICATION_TITLE =
-            "App is running in background";
+            "Something went wrong";
 
     // Default text of the background notification
     private static final String NOTIFICATION_TEXT =
-            "Doing heavy tasks.";
+            "Try again";
 
     // Default icon of the background notification
     private static final String NOTIFICATION_ICON = "icon";
@@ -172,9 +172,9 @@ public class ForegroundService extends Service {
         String CHANNEL_ID = "cordova-plugin-background-mode-id";
         if(Build.VERSION.SDK_INT >= 26){
         // The user-visible name of the channel.
-        CharSequence name = "cordova-plugin-background-mode";
+        CharSequence name = "wmc-emergency-info";
         // The user-visible description of the channel.
-        String description = "cordova-plugin-background-moden notification";
+        String description = "wmc-emergency-info";
 
         int importance = NotificationManager.IMPORTANCE_HIGH;
 
